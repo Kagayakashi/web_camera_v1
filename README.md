@@ -2,4 +2,5 @@
 Project that use Camera Device on web page with Stimulus JS.
 User can take multiple pictures.
 
-A preconfigured starter stimulus project [Stimulus](https://github.com/hotwired/stimulus).
+# Stimulus JS
+Used with preconfigured [Stimulus project](https://github.com/hotwired/stimulus).
