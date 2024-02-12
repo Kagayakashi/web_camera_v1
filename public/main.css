@@ -1,0 +1,48 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
+}
+
+main {
+  min-width: 128px;
+  min-height: 128px;
+}
+
+.camera {
+  display: flex;
+  flex-direction: column;
+}
+
+.camera-capture {
+  width: 80px;
+  height: 40px;
+}
+
+.camera-video {
+  max-width: 240px;
+  max-height: 320px;
+  min-width: 128px;
+  min-height: 128px;
+}
+
+.camera-photos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  gap: 6px;
+}
+
+.camera-photo {
+  width: 60px;
+  height: 80px;
+  object-fit: cover; /* Растягивать или уменьшать изображение, чтобы оно полностью заполняло контейнер */
+  border-radius: 8px; /* Закругленные углы */
+}
+
+.camera-video,
+.camera-photo {
+  display: none;
+}
+
+.camera--supported .camera-video,
+.camera--supported .camera-photo {
+  display: initial;
+}

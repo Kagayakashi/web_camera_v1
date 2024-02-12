@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+  <script src="bundle.js" async></script>
+</head>
+<body>
+  <main>
+    <div data-controller="hello">
+      <h1>Hello controller</h1>
+      <label for="name">Whats your name?</label>
+      <input data-hello-target="name" type="text" id="name">
+      <button data-action="click->hello#greet">Greet</button>
+      <p data-hello-target="welcome"></p>
+    </div>
+
+    <div data-controller="camera" data-camera-supported-class="camera--supported" class="camera">
+      <h1>Camera controller</h1>
+      <canvas class="camera-photo hidden" style="display: none;"></canvas>
+      <button data-action="click->camera#capture" class="camera-capture">Take photo</button>
+      <select data-camera-target="select" data-action="change->camera#changeCamera">
+        <!-- Camera devices will be dispayed here -->
+      </select>
+      <video data-camera-target="video" class="camera-video" autoplay="true" muted="true"></video>
+      <br>
+      <div data-camera-target="photoContainer" class="camera-photos">
+        <!-- Photos will be displayed here -->
+      </div>
+      <p data-camera-target="error"></p>
+    </div>
+  </main>
+  <footer>
+  </footer>
+</body>
+</html>
